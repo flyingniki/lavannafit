@@ -16,12 +16,15 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
+        $adminEmail = (string) env('ADMIN_EMAIL', 'admin@lavannafit.ru');
+        $adminPassword = (string) env('ADMIN_PASSWORD', 'LavannaFit2026!');
+
         // Admin user
         User::updateOrCreate(
-            ['email' => 'admin@fitonline.ru'],
+            ['email' => $adminEmail],
             [
                 'name'     => 'Администратор',
-                'password' => Hash::make('Admin1234!'),
+                'password' => Hash::make($adminPassword),
                 'is_admin' => true,
             ]
         );
