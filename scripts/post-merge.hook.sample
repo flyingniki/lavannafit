@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+# Git hook sample: run deploy steps after a successful pull/merge.
+sh scripts/deploy_after_pull.sh
