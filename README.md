@@ -102,8 +102,15 @@ APP_URL=http://127.0.0.1:8000
 
 ### Админка: дефолтный пользователь
 Создается сидером (`DatabaseSeeder`):
-- Email: `admin@fitonline.ru`
-- Password: `Admin1234!`
+- Email: `admin@lavannafit.ru`
+- Password: `LavannaFit2026!`
+
+Можно переопределить через `.env`:
+
+```env
+ADMIN_EMAIL=admin@lavannafit.ru
+ADMIN_PASSWORD=LavannaFit2026!
+```
 
 После первого входа рекомендуется сменить пароль в БД/через дополнительный функционал.
 
